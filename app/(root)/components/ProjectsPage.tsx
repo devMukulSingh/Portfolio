@@ -45,13 +45,13 @@ const ProjectsPage = () => {
           "TailwindCSS",
           "ShadcnUI",
         ],
-        imageUrl: "/chatNext.png",
+        imageUrl: "/resumeBuilder.png",
         githubLink: "https://github.com/devMukulSingh/rangamResBuilder.git",
         hostedLink: "https://rangam-res-builder.vercel.app/",
       },
     ];
   return (
-    <div className='h-screen flex items-center w-full sm:w-2/3'>
+    <div className='min-h-screen flex  w-full sm:w-2/3'>
         <div className="flex flex-col gap-5">
             <h1 className="text-2xl font-semibold">
                 Projects
