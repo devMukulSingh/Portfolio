@@ -1,63 +1,74 @@
-'use client'
-import Image from "next/image"
+"use client";
+import Image from "next/image";
 
 const SkillsPage = () => {
-    const skillsImg = [
-      {
-        url: "/typescript2.png",
-        link: "https://www.typescriptlang.org",
-      },
-      { url: "/react.png", link: "https://react.dev/" },
-      { url: "/tailwind.png", link: "https://tailwindcss.com/" },
-      { url: "/next.png", link: "https://nextjs.org/" },
-      { url: "/shadcn.png", link: "https://ui.shadcn.com/" },
-      { url: "/express-js.png", link: "http://expressjs.com/" },
-      { url: "/node.png", link: "https://nodejs.org/" },
-      { url: "/prisma.png", link: "https://www.prisma.io/" },
-      { url: "/mongodb.png", link: "https://www.mongodb.com/" },
-      { url: "/mysql.png", link: "https://www.mysql.com/" },
-    ];
+  const skillsImg = [
+    {
+      url: "/typescript2.png",
+      link: "https://www.typescriptlang.org",
+    },
+    { url: "/react.png", link: "https://react.dev/" },
+    { url: "/tailwind.png", link: "https://tailwindcss.com/" },
+    { url: "/next.png", link: "https://nextjs.org/" },
+    { url: "/shadcn.png", link: "https://ui.shadcn.com/" },
+    { url: "/express-js.png", link: "http://expressjs.com/" },
+    { url: "/node.png", link: "https://nodejs.org/" },
+    { url: "/prisma.png", link: "https://www.prisma.io/" },
+    { url: "/mongodb.png", link: "https://www.mongodb.com/" },
+    { url: "/mysql.png", link: "https://www.mysql.com/" },
+  ];
   return (
-    <div className="flex flex-col gap-10 h-screen justify-center items-center ">
-        <h1 className="text-4xl drop-shadow-lg drop-shadow-white">
+    <div className="flex h-screen items-center ">
+      <div className="flex flex-col gap-10">
+        <h1 className="
+            text-center 
+            text-4xl 
+            drop-shadow-lg 
+            drop-shadow-white
+            font-semibold
+            ">
             Skills
         </h1>
-        <div className="
+        <div
+          className="
             grid 
             gap-14
             grid-cols-2
             lg:grid-cols-5
             md:grid-cols-3
-        ">
-            {
-                skillsImg.map( (img: { link:string,url:string},index:number) => (
-                    <a 
-                        href={img.link}
-                        target="_blank"
-                        className="
+        "
+        >
+          {skillsImg.map(
+            (img: { link: string; url: string }, index: number) => (
+              <a
+                href={img.link}
+                target="_blank"
+                className="
                             relative 
                             w-[10rem] 
                             h-[10rem]
                             
-                            " 
-                            key={index}
-                            >
-                        <Image 
-                            fill
-                            className="
-                                hover:scale-90
-                                transition-transform
-                                cursor-pointer 
-                                object-contain 
-                                object-center"
-                            alt="skillImg" 
-                            src={img.url}/>
-                     </a>
-                ))
-            }
+                            "
+                key={index}
+              >
+                <Image
+                  fill
+                  className="
+                            hover:scale-90
+                            transition-transform
+                            cursor-pointer 
+                            object-contain 
+                            object-center"
+                  alt="skillImg"
+                  src={img.url}
+                />
+              </a>
+            )
+          )}
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default SkillsPage
+export default SkillsPage;

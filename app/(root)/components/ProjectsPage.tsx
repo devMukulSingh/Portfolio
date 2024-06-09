@@ -51,11 +51,11 @@ const ProjectsPage = () => {
       },
     ];
   return (
-    <div className='min-h-screen flex  w-full sm:w-2/3'>
-        <div className="flex flex-col gap-5">
-            <h1 className="text-2xl font-semibold">
+    <div className='min-h-screen flex flex-col gap-5  w-full sm:w-3/4'>
+            <h1 className="text-4xl font-semibold">
                 Projects
             </h1>
+        <div className="flex flex-col gap-5 ">
             {
                 projects.map( (project,index) => (
                     <Project key={index} project={project}/>
