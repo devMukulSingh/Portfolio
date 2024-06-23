@@ -51,8 +51,8 @@ const ProjectsPage = () => {
       },
     ];
   return (
-    <div className='min-h-screen flex flex-col gap-5  w-full sm:w-3/4'>
-            <h1 className="text-4xl font-semibold">
+    <div className='min-h-screen flex flex-col justify-center gap-5  w-full sm:w-3/4'>
+            <h1 className="text-4xl font-semibold text-center">
                 Projects
             </h1>
         <div className="flex flex-col gap-5 ">

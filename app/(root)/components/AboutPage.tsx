@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div className="flex flex-col h-[100vh]  items-center">
+    <div className="flex flex-col  items-center">
       <h1 className="text-4xl ">About Me</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-full sm:w-2/3 ">
         <figure className="relative w-[25rem] h-[25rem] rounded-md">

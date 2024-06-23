@@ -23,8 +23,8 @@ const Project: FC<ProjectProps> = ({ project }) => {
     const router = useRouter();
   return (
 
-    <div className="border grid grid-cols-1 sm:grid-cols-2 rounded-md ">
-      <figure className="relative w-[30rem] h-[30rem]">
+    <div className=" grid grid-cols-1 sm:grid-cols-2 rounded-md ">
+      <figure className="relative w-[30rem] h-[22rem]">
         <Image
           src={project.imageUrl}
           alt="imageUrl"

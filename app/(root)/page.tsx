@@ -6,7 +6,7 @@ import SkillsPage from "./components/SkillsPage";
 
 export default function Home() {
   return (
-    <main className="bg-slate-900 text-white flex flex-col min-h-[calc(100vh-5rem)] items-center justify-center">
+    <main className="bg-slate-900 text-white flex flex-col min-h-[calc(100vh-5rem)] gap-10 items-center justify-center">
       <HomePage/>
       <AboutPage/>
       <ProjectsPage/>

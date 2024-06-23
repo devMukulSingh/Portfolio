@@ -1,40 +1,69 @@
-'use client'
+"use client";
+import useSWRMutation from "swr/mutation";
+import axios from "axios";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import toast from "react-hot-toast";
+const formSchema = z.object({
+  fullName: z.string().trim().min(1, {
+    message: "Name is required",
+  }),
+  email: z.string().email().min(1, {
+    message: "Email is required",
+  }),
+  message: z.string().trim().min(20, {
+    message: "Message must be minimum 20 characters",
+  }),
+});
+type formValues = z.infer<typeof formSchema>;
 
-import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
-
+async function sendMail(url:string, { arg }: {arg:formValues}) {
+  return await axios.post(url, arg);
+}
 const ContactForm = () => {
-    const formSchema = z.object({
-        fullName:z.string().trim().min(1,{
-            message:'Name is required'
-        }),
-        email:z.string().email().min(1,{
-            message:'Email is required'
-        }),
-        message:z.string().trim().min(20,{
-            message : 'Message must be minimum 20 characters'
-        })
-    })
-    type formValues = z.infer<typeof formSchema>;
-    const form = useForm<formValues>({
-      resolver: zodResolver(formSchema),
-    });
-    const onSubmit = (data:formValues ) => {
-        console.log(data);
+  const form = useForm<formValues>({
+    resolver: zodResolver(formSchema),
+  });
+  const { trigger,isMutating } = useSWRMutation(`/api/send-mail`,sendMail,{
+    onError(e){
+      toast.error(`Something went wrong, please try again later`)
+      console.log(`Error in sendMail`,e);
+    },
+    onSuccess(){
+      form.reset();
+      toast.success(`Message send`);
     }
+  });
+  const onSubmit = async (data: formValues) => { 
+    try{
+      trigger(data) 
+    }
+    catch(e){
+      console.log(`Error in onSubmit`,e);
+      toast.error(`Something went wrong`)
+    }
+     
+  };
   return (
     <div className="flex flex-col gap-10">
-        <h1 className="text-4xl font-medium">
-            Write a Message🖋️
-        </h1>
+      <h1 className="text-4xl font-medium">Write a Message🖋️</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
+            disabled={isMutating}
             name="fullName"
             control={form.control}
             render={({ field }) => (
@@ -48,6 +77,7 @@ const ContactForm = () => {
             )}
           />
           <FormField
+            disabled={isMutating}
             name="email"
             control={form.control}
             render={({ field }) => (
@@ -61,6 +91,7 @@ const ContactForm = () => {
             )}
           />
           <FormField
+            disabled={isMutating}
             name="message"
             control={form.control}
             render={({ field }) => (
@@ -74,14 +105,16 @@ const ContactForm = () => {
             )}
           />
           <Button
-            className="border w-full" 
-            variant="ghost">
+            disabled={isMutating}
+            className="border w-full"
+            variant="ghost"
+          >
             Send
           </Button>
         </form>
       </Form>
     </div>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;
