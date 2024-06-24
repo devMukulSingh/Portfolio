@@ -1,5 +1,6 @@
 import { MailIcon, PhoneCall } from "lucide-react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { motion  } from "framer-motion";
 
 const ContactLinks = () => {
   const contactLinks = [
@@ -21,7 +22,11 @@ const ContactLinks = () => {
     },
   ];
   return (
-    <div className="flex  flex-col gap-5">
+    <motion.div
+      initial={{opacity:0,y:300}}
+      whileInView={{ opacity:1, y:0}}
+      transition={{ duration:0.5,ease:'easeInOut'}}
+      className="flex  flex-col gap-5">
       <h1 className="text-4xl font-medium mb-10">Connect with me</h1>
       {contactLinks.map((contact, index) => (
         <a
@@ -34,7 +39,7 @@ const ContactLinks = () => {
           {contact.link}
         </a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

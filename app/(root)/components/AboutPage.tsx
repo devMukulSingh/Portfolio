@@ -3,6 +3,7 @@ import { useAppDispatch } from "@/redux/hooks/hook";
 import { setAboutRef } from "@/redux/rootReducer";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion"
 
 const AboutPage = () => {
   const dispatch = useAppDispatch();
@@ -17,15 +18,25 @@ const AboutPage = () => {
     >
       <h1 className="text-4xl ">About Me</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-full sm:w-2/3 ">
-        <figure className="relative w-[25rem] h-[25rem] rounded-md">
+        <motion.div
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          className="relative w-[25rem] h-[25rem] rounded-md"
+        >
           <Image
             src={"/about.jpg"}
             alt="aboutPic"
             className="object-contain rounded-md"
             fill
           />
-        </figure>
-        <div className=" flex flex-col gap-5 justify-center">
+        </motion.div>
+        <motion.div
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          className=" flex flex-col gap-5 justify-center"
+        >
           <h1 className="font-semibold text-xl">
             A dedicated Full Stack developer <br />
             based in Uttarakhand,India
@@ -39,7 +50,7 @@ const AboutPage = () => {
             responsive user interfaces, and optimizing performance for web
             applications.
           </h1>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

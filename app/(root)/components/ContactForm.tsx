@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import useSWRMutation from "swr/mutation";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
@@ -58,7 +59,12 @@ const ContactForm = () => {
      
   };
   return (
-    <div className="flex flex-col gap-10">
+    <motion.div
+      initial={{ opacity: 0, y: -300 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className="flex flex-col gap-10"
+    >
       <h1 className="text-4xl font-medium">Write a Message🖋️</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
@@ -113,7 +119,7 @@ const ContactForm = () => {
           </Button>
         </form>
       </Form>
-    </div>
+    </motion.div>
   );
 };
 

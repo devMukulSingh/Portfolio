@@ -28,6 +28,14 @@ const ProjectsPage = () => {
         hostedLink: "https://cmsecomm.vercel.app/",
       },
       {
+        title: "Ecommerce store integrated with CMS",
+        description: "An Ecommerce store ",
+        tech: ["Typescript", "Nextjs", "TailwindCSS", "ShadcnUI"],
+        imageUrl: "/ecommStore.png",
+        githubLink: "https://github.com/devMukulSingh/eCommerceStore.git",
+        hostedLink: "https://m-ecom-store.vercel.app/",
+      },
+      {
         title: "ChatNext",
         description:
           "A real time chat app using web-sockets for chatting and sending images",

@@ -5,8 +5,9 @@ import TechCard from "./TechCard";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { Github, Link2, SquareArrowOutUpRight } from "lucide-react";
+import {  Link2, SquareArrowOutUpRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface ProjectProps {
   project: {
@@ -22,17 +23,25 @@ interface ProjectProps {
 const Project: FC<ProjectProps> = ({ project }) => {
     const router = useRouter();
   return (
-
     <div className=" grid grid-cols-1 sm:grid-cols-2 rounded-md ">
-      <figure className="relative w-[30rem] h-[22rem]">
+      <motion.div
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        initial={{ opacity: 0, x: 200 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="relative w-[30rem] h-[22rem]"
+      >
         <Image
           src={project.imageUrl}
           alt="imageUrl"
           fill
           className="object-contain object-right"
-          />
-      </figure>
-      <div className="flex flex-col gap-5 justify-center items-center">
+        />
+      </motion.div>
+      <motion.div 
+           transition={{ duration: 0.5, ease: "easeInOut" }}
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+      className="flex flex-col gap-5 justify-center items-center">
         <h1 className="text-2xl font-semibold">{project.title}</h1>
         <h1 className="text-sm">{project.description}</h1>
         <div
@@ -43,10 +52,10 @@ const Project: FC<ProjectProps> = ({ project }) => {
           md:grid-cols-3
           gap-3
           "
-          >
+        >
           {project.tech.map((tech, index) => (
             <TechCard tech={tech} key={index} />
-            ))}
+          ))}
         </div>
         <div className="flex gap-5">
           <a
@@ -63,7 +72,7 @@ const Project: FC<ProjectProps> = ({ project }) => {
             "
             href={project.githubLink}
             target="_blank"
-            >
+          >
             <FaGithub size={20} />
             Code
           </a>
@@ -81,13 +90,13 @@ const Project: FC<ProjectProps> = ({ project }) => {
             "
             href={project.hostedLink}
             target="_blank"
-            >
+          >
             <SquareArrowOutUpRight size={20} />
             Live demo
           </a>
         </div>
+    </motion.div>
       </div>
-    </div>
   );
 };
 
