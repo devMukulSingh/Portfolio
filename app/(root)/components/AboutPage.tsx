@@ -1,9 +1,17 @@
+"use client";
+import { useAppDispatch } from "@/redux/hooks/hook";
+import { setAboutRef } from "@/redux/rootReducer";
 import Image from "next/image";
-import React from "react";
+import { useEffect, useRef } from "react";
 
 const AboutPage = () => {
+  const dispatch = useAppDispatch();
+  const aboutRef = useRef<HTMLDivElement | null>(null);
+  useEffect( () => {
+    dispatch(setAboutRef(aboutRef))
+  },[])
   return (
-    <div className="flex flex-col  items-center">
+    <div className="flex flex-col  items-center min-h-screen justify-center" ref={aboutRef}>
       <h1 className="text-4xl ">About Me</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 w-full sm:w-2/3 ">
         <figure className="relative w-[25rem] h-[25rem] rounded-md">

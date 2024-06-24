@@ -1,8 +1,17 @@
+'use client'
+import { useAppDispatch } from "@/redux/hooks/hook";
+import { setHomeRef } from "@/redux/rootReducer";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const HomePage = () => {
+    const dispatch = useAppDispatch();
+    const aboutRef = useRef<HTMLDivElement | null >(null);
+    useEffect(() => {
+      dispatch(setHomeRef(aboutRef));
+    }, []);
   return (
-    <div className="flex items-center gap-5 h-[calc(100vh-5rem)]">
+    <div className="flex items-center gap-5 h-[calc(100vh-5rem)]" ref={aboutRef}>
       <div className="flex flex-col gap-5">
         <h1 className="text-4xl font-semibold">FULL STACK developer</h1>
         <h1 className="text-lg">

@@ -1,7 +1,15 @@
 "use client";
+import { useAppDispatch } from "@/redux/hooks/hook";
+import { setSkillsRef } from "@/redux/rootReducer";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const SkillsPage = () => {
+    const dispatch = useAppDispatch();
+    const skillsRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+      dispatch(setSkillsRef(skillsRef));
+    }, []);
   const skillsImg = [
     {
       url: "/typescript2.png",
@@ -18,16 +26,18 @@ const SkillsPage = () => {
     { url: "/mysql.png", link: "https://www.mysql.com/" },
   ];
   return (
-    <div className="flex h-screen items-center ">
+    <div className="flex h-screen items-center " ref={skillsRef}>
       <div className="flex flex-col gap-10">
-        <h1 className="
+        <h1
+          className="
             text-center 
             text-4xl 
             drop-shadow-lg 
             drop-shadow-white
             font-semibold
-            ">
-            Skills
+            "
+        >
+          Skills
         </h1>
         <div
           className="

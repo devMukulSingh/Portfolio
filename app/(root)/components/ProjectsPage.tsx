@@ -1,6 +1,15 @@
+'use client'
+import { useAppDispatch } from "@/redux/hooks/hook";
 import Project from "./Project"
+import { useEffect, useRef } from "react";
+import { setProjectRef } from "@/redux/rootReducer";
 
 const ProjectsPage = () => {
+    const dispatch = useAppDispatch();
+    const projectRef = useRef<HTMLDivElement | null>(null);
+    useEffect(() => {
+      dispatch(setProjectRef(projectRef));
+    }, []);
     const projects = [
       {
         title: "Ecommerce CMS",
@@ -51,19 +60,18 @@ const ProjectsPage = () => {
       },
     ];
   return (
-    <div className='min-h-screen flex flex-col justify-center gap-5  w-full sm:w-3/4'>
-            <h1 className="text-4xl font-semibold text-center">
-                Projects
-            </h1>
-        <div className="flex flex-col gap-5 ">
-            {
-                projects.map( (project,index) => (
-                    <Project key={index} project={project}/>
-                ))
-            }
-        </div>
+    <div
+      className="min-h-screen flex flex-col justify-center gap-5  w-full sm:w-3/4"
+      ref={projectRef}
+    >
+      <h1 className="text-4xl font-semibold text-center">Projects</h1>
+      <div className="flex flex-col gap-5 ">
+        {projects.map((project, index) => (
+          <Project key={index} project={project} />
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
 export default ProjectsPage
