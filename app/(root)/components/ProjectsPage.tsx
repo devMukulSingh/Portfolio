@@ -69,7 +69,7 @@ const ProjectsPage = () => {
     ];
   return (
     <div
-      className="min-h-screen flex flex-col justify-center gap-5  w-full sm:w-3/4"
+      className=" flex flex-col justify-center gap-5 w-full "
       ref={projectRef}
     >
       <h1 className="text-4xl font-semibold text-center">Projects</h1>

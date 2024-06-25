@@ -11,7 +11,7 @@ const HomePage = () => {
       dispatch(setHomeRef(aboutRef));
     }, []);
   return (
-    <div className="flex items-center gap-5 h-[calc(100vh-5rem)]" ref={aboutRef}>
+    <div className="md:flex-row flex flex-col items-center justify-center gap-5 h-[calc(100vh-5rem)]" ref={aboutRef}>
       <div className="flex flex-col gap-5">
         <h1 className="text-4xl font-semibold">FULL STACK developer</h1>
         <h1 className="text-lg">
