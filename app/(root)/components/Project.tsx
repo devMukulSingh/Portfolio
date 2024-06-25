@@ -23,12 +23,12 @@ interface ProjectProps {
 const Project: FC<ProjectProps> = ({ project }) => {
     const router = useRouter();
   return (
-    <div className="flex md:flex-row gap-5 flex-col rounded-md items-center ">
+    <div className="flex md:flex-row gap-0 md:gap-5 flex-col rounded-md w-full items-center justify-center ">
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="relative w-[30rem] h-[22rem]"
+        className="relative w-[22rem] h-[22rem]"
       >
         <Image
           src={project.imageUrl}
@@ -41,7 +41,7 @@ const Project: FC<ProjectProps> = ({ project }) => {
            transition={{ duration: 0.5, ease: "easeInOut" }}
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
-      className="flex flex-col gap-5 justify-center items-center w-full sm:w-1/2">
+      className="flex flex-col gap-5 w-full sm:w-1/2">
         <h1 className="text-2xl font-semibold">{project.title}</h1>
         <h1 className="text-sm">{project.description}</h1>
         <div

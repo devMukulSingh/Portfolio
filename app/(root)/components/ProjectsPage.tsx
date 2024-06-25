@@ -69,11 +69,11 @@ const ProjectsPage = () => {
     ];
   return (
     <div
-      className=" flex flex-col justify-center gap-5 w-full "
+      className=" flex flex-col justify-center gap-5 w-full items-center "
       ref={projectRef}
     >
       <h1 className="text-4xl font-semibold text-center">Projects</h1>
-      <div className="flex flex-col gap-5 ">
+      <div className="flex flex-col gap-5 items-center justify-center w-full">
         {projects.map((project, index) => (
           <Project key={index} project={project} />
         ))}
