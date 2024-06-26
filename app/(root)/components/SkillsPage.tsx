@@ -27,7 +27,7 @@ const SkillsPage = () => {
     { url: "/mysql.png", link: "https://www.mysql.com/" },
   ];
   return (
-    <div className="flex items-center" ref={skillsRef}>
+    <div className="min-h-screen flex items-center" ref={skillsRef}>
       <div className="flex flex-col gap-10">
         <h1
           className="

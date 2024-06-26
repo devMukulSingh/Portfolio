@@ -65,7 +65,7 @@ const ContactForm = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="flex flex-col gap-10"
     >
-      <h1 className="text-4xl font-medium">Write a Message🖋️</h1>
+      <h1 className="text-4xl sm:text-5xl font-medium">Write a Message🖋️</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
           <FormField
@@ -90,7 +90,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>Your email</FormLabel>
                 <FormControl>
-                  <Input placeholder="mukulsingh2276@gmail.com" {...field} />
+                  <Input type="email" placeholder="mukulsingh2276@gmail.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
