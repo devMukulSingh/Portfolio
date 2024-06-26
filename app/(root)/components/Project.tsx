@@ -28,7 +28,7 @@ const Project: FC<ProjectProps> = ({ project }) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="relative w-[22rem] h-[22rem]"
+        className="relative w-full min-w-[15rem] max-w-[22rem] h-[22rem]"
       >
         <Image
           src={project.imageUrl}

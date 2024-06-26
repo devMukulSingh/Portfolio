@@ -13,8 +13,8 @@ const HomePage = () => {
   return (
     <div className="md:flex-row flex flex-col items-center justify-center gap-5 h-[calc(100vh-5rem)]" ref={aboutRef}>
       <div className="flex flex-col gap-5">
-        <h1 className="text-4xl font-semibold">FULL STACK developer</h1>
-        <h1 className="text-lg">
+        <h1 className="text-3xl sm:text-4xl font-semibold">FULL STACK developer</h1>
+        <h1 className="text-md sm:text-lg">
           Hi 🖐️ I am Mukul Singh Bisht. <br />A passionate MERN and Next js
           developer
         </h1>

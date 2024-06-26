@@ -27,15 +27,15 @@ const ContactLinks = () => {
       whileInView={{ opacity:1, y:0}}
       transition={{ duration:0.5,ease:'easeInOut'}}
       className="flex  flex-col gap-5">
-      <h1 className="text-4xl font-medium mb-10">Connect with me</h1>
+      <h1 className="text-4xl sm:text-5xl font-semibold mb-10">Connect with me</h1>
       {contactLinks.map((contact, index) => (
         <a
           key={index}
-          className="hover:underline flex gap-3 items-center"
+          className="hover:underline flex gap-3 items-center text-sm sm:text-md"
           href={contact.link}
           target="_blank"
         >
-          <contact.icon size={25} />
+          <contact.icon className="flex-shrink-0" size={25} />
           {contact.link}
         </a>
       ))}

@@ -14,6 +14,7 @@ const SkillsPage = () => {
     {
       url: "/typescript2.png",
       link: "https://www.typescriptlang.org",
+      
     },
     { url: "/react.png", link: "https://react.dev/" },
     { url: "/tailwind.png", link: "https://tailwindcss.com/" },
@@ -21,17 +22,18 @@ const SkillsPage = () => {
     { url: "/shadcn.png", link: "https://ui.shadcn.com/" },
     { url: "/express-js.png", link: "http://expressjs.com/" },
     { url: "/node.png", link: "https://nodejs.org/" },
-    { url: "/prisma.png", link: "https://www.prisma.io/" },
+    { url: "/prisma.jpg", link: "https://www.prisma.io/" },
     { url: "/mongodb.png", link: "https://www.mongodb.com/" },
     { url: "/mysql.png", link: "https://www.mysql.com/" },
   ];
   return (
-    <div className="flex items-center " ref={skillsRef}>
+    <div className="flex items-center" ref={skillsRef}>
       <div className="flex flex-col gap-10">
         <h1
           className="
             text-center 
-            text-4xl 
+            text-4xl
+            sm:text-5xl 
             drop-shadow-lg 
             drop-shadow-white
             font-semibold
@@ -42,7 +44,8 @@ const SkillsPage = () => {
         <div
           className="
             grid 
-            gap-14
+            sm:gap-14
+            gap-7
             grid-cols-2
             lg:grid-cols-5
             md:grid-cols-3
@@ -54,8 +57,10 @@ const SkillsPage = () => {
                 href={img.link}
                 target="_blank"
                 className="
-                            relative 
-                            w-[10rem] 
+                            relative  
+                            w-full
+                            min-w-[6rem]
+                            max-w-[10rem] 
                             h-[10rem]
                             
                             "

@@ -3,7 +3,11 @@
   @tailwind utilities;
 
 
-
+body,html{
+        width: 100%;
+      overflow: auto;
+      
+}
 
   @layer base {
     :root {
@@ -74,7 +78,8 @@
       @apply border-border;
     }
     body {
-      
+
+
       @apply bg-background text-foreground;
     }
   }
