@@ -33,7 +33,13 @@ const Navbar = () => {
         aboutRef?.current?.scrollIntoView({ behavior: "smooth" });
         break;
       case "Contact":
-        contactRef?.current?.scrollIntoView({ behavior: "smooth" });
+        contactRef?.current?.scrollIntoView({ behavior: "smooth" ,block:"start",inline:"nearest"});
+        // contactRef?.current?.scrollTo({
+        //   behavior:'smooth',
+        //   top:1000,
+        // })
+
+
         break;
       case "Skills":
         skillsRef?.current?.scrollIntoView({ behavior: "smooth" });
@@ -41,7 +47,6 @@ const Navbar = () => {
       case "Projects":
         projectRef?.current?.scrollIntoView({ behavior: "smooth" });
         break;
-
       default:
         break;
     }

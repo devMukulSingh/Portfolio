@@ -37,6 +37,11 @@ async function sendMail(url:string, { arg }: {arg:formValues}) {
 const ContactForm = () => {
   const form = useForm<formValues>({
     resolver: zodResolver(formSchema),
+    defaultValues:{
+      email:"",
+      fullName:"",
+      message:""
+    }
   });
   const { trigger,isMutating } = useSWRMutation(`/api/send-mail`,sendMail,{
     onError(e){
@@ -60,7 +65,7 @@ const ContactForm = () => {
   };
   return (
     <motion.div
-      initial={{ opacity: 0, y: -300 }}
+      initial={{ opacity: 0, y: -200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="flex flex-col gap-10"

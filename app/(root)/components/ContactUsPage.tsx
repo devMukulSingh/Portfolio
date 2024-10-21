@@ -13,8 +13,8 @@ const ContactUsPage = () => {
     dispatch(setContactRef(contactRef));
   }, []);
   return (
-    <div className="flex items-center " ref={contactRef}>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+    <div className="flex items-center l  border-white" ref={contactRef}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16  border-green-500">
         <ContactLinks />
         <ContactForm />
       </div>
