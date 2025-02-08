@@ -55,7 +55,7 @@ const ContactForm = () => {
   });
   const onSubmit = async (data: formValues) => { 
     try{
-      trigger(data) 
+      // trigger(data) 
     }
     catch(e){
       console.log(`Error in onSubmit`,e);
