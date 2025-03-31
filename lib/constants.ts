@@ -43,3 +43,74 @@ export const contactLinks = [
     },
 
 ];
+
+export const skills = [
+    {
+        url: "/typescript2.png",
+        link: "https://www.typescriptlang.org",
+        title: "Typescript"
+    },
+    {
+        url: "/golang.png",
+        link: "https://go.dev/",
+        title: "Golang"
+    },
+    {
+        url: "/react.png", link: "https://react.dev/",
+        title: "React JS"
+    },
+    {
+        url: "/tailwind.png", link: "https://tailwindcss.com/",
+        title: "Tailwind CSS"
+    },
+    {
+        url: "/next.png", link: "https://nextjs.org/",
+        title: "Next JS"
+    },
+    {
+        url: "/shadcn.png", link: "https://ui.shadcn.com/",
+        title: "Shadcn UI"
+    },
+    {
+        url: "/hono.jfif",
+        link: "https://hono.dev/",
+        title: "Hono JS"
+    },
+    {
+        url: "/express-js.png", link: "http://expressjs.com/",
+        title: "Express JS"
+    },
+    {
+        url: "/node.png", link: "https://nodejs.org/",
+        title: "Node JS"
+    },
+    {
+        url: "/prisma.jpg", link: "https://www.prisma.io/",
+        title: "Prisma ORM"
+    },
+    {
+        url: "/sqlc.png",
+        link: "https://sqlc.dev/",
+        title: "Sqlc"
+    },
+    {
+        url: "/docker.png",
+        link: "https://www.docker.com/",
+        title: "Docker"
+    },
+
+    {
+        url: "/postresql.png",
+        link: "https://www.postgresql.org/",
+        title: "Postresql"
+    },
+    {
+        url: "/redis.png",
+        link: "https://redis.io/",
+        title: "Redis"
+    },
+    {
+        url: "/mongodb.png", link: "https://www.mongodb.com/",
+        title: "MongoDB"
+    },
+];
