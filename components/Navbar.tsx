@@ -10,9 +10,6 @@ const Navbar = () => {
       title: "Home",
     },
     {
-      title: "About",
-    },
-    {
       title: "Skills",
     },
     {

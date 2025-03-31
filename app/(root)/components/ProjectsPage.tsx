@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       </h1>
       <div className="flex flex-col gap-5 items-center justify-center w-full">
         {projects.map((project, index) => (
-          <Project key={index} project={project} />
+          <Project key={index} project={project} index={index} />
         ))}
       </div>
     </div>
@@ -35,16 +35,28 @@ type ProjectProps = {
     githubLink2?: string;
     hostedLink: string;
   };
+  index:number
 }
 
-const Project: FC<ProjectProps> = ({ project }) => {
+const Project: FC<ProjectProps> = ({ project, index }) => {
   return (
-    <div className="flex md:flex-row gap-0 md:gap-5 flex-col rounded-md w-full items-center justify-center ">
+    <div 
+    className={`
+    ${index%2===0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+    flex 
+    gap-0 
+    md:gap-5 
+    flex-col 
+    rounded-md 
+    w-full 
+    items-center 
+    justify-center 
+    `}>
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
         initial={{ opacity: 0, x: 200 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="relative w-full min-w-[15rem] max-w-[22rem] h-[22rem]"
+        className="relative w-full min-w-[20rem] max-w-[22rem] h-[22rem]"
       >
         <Image
           src={project.imageUrl}

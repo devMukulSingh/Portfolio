@@ -32,14 +32,12 @@ export const contactLinks = [
 
     {
         icon: MailIcon,
-        link: "mukulsingh2276@gmail.com",
-        title: "E-mail"
+        title: "mukulsingh2276@gmail.com",
     },
 
     {
         icon: PhoneCall,
-        link: "+91 9808273072",
-        title: "Mobile"
+        title: "+91 9808273072",
     },
 
 ];

@@ -55,15 +55,13 @@ function ContactLinks() {
       </div>
       <div className="space-y-4">
         {contactLinks.map((contact, index) => (
-          <a
+          <h1
             key={index}
             className="hover:underline flex gap-3 items-center text-sm sm:text-md"
-            href={contact.link}
-            target="_blank"
           >
             <contact.icon className="flex-shrink-0" size={25} />
-            {contact.link}
-          </a>
+            {contact.title}
+          </h1>
         ))}
       </div>
     </div>
