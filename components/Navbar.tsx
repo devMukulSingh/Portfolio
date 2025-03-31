@@ -40,7 +40,10 @@ const Navbar = () => {
       case "Skills":
         document
           .getElementById("skillsPage")
-          ?.scrollIntoView({ behavior: "smooth" });
+          ?.scrollIntoView({
+            behavior: "smooth",
+            inline:"start"
+          });
         break;
       case "Projects":
         document

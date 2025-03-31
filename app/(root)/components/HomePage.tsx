@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div
       id="homePage"
-      className="md:flex-row flex flex-col items-center justify-center gap-5 h-[calc(100vh-5rem)]"
+      className="md:flex-row flex flex-col items-center justify-center gap-5   h-[calc(100vh-5rem)]"
     >
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-semibold sm:text-3xl">
