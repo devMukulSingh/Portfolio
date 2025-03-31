@@ -9,7 +9,7 @@ export default function Home() {
     <main className="bg-slate-900 sm:px-8 px-5 pb-20 lg:px-20 md:px-10 text-white flex flex-col min-h-[calc(100vh-5rem)] gap-10 items-center justify-center">
       <HomePage/>
       <SkillsPage/>
-      <AboutPage/>
+      {/* <AboutPage/> */}
       <ProjectsPage/>
     </main>
   );

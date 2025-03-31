@@ -2,6 +2,8 @@ import { MailIcon, PhoneCall, StickyNote } from "lucide-react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaHackerrank } from "react-icons/fa";
 
+export const resumeLink = "https://drive.google.com/file/d/1A2-oDrZI8sJ2LxtRFPOR-LK-KBBAxnO-/view?usp=sharing"
+
 export const profileLinks = [
     {
         icon: BsGithub,
