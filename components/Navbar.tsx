@@ -27,25 +27,27 @@ const Navbar = () => {
   const handleClick = (title: string) => {
     switch (title) {
       case "Home":
-        homeRef?.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      case "About":
-        aboutRef?.current?.scrollIntoView({ behavior: "smooth" });
+        document.getElementById("homePage")?.scrollIntoView({ behavior: "smooth" });
         break;
       case "Contact":
-        contactRef?.current?.scrollIntoView({ behavior: "smooth" ,block:"start",inline:"nearest"});
-        // contactRef?.current?.scrollTo({
-        //   behavior:'smooth',
-        //   top:1000,
-        // })
-
+        document
+          .getElementById("contactPage")
+          ?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
+          });
 
         break;
       case "Skills":
-        skillsRef?.current?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("skillsPage")
+          ?.scrollIntoView({ behavior: "smooth" })
         break;
       case "Projects":
-        projectRef?.current?.scrollIntoView({ behavior: "smooth" });
+          document
+            .getElementById("projectsPage")
+            ?.scrollIntoView({ behavior: "smooth" });
         break;
       default:
         break;

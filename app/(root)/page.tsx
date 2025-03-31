@@ -1,5 +1,3 @@
-import AboutPage from "./components/AboutPage";
-import ContactUsPage from "./components/Footer";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
 import SkillsPage from "./components/SkillsPage";

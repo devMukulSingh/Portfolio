@@ -13,6 +13,7 @@ export default function Footer() {
   }, []);
   return (
     <div
+      id="contactPage"
       className="
     flex 
     items-center  

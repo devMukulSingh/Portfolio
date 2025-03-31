@@ -139,7 +139,7 @@ export const projects = [
     {
         title: "PrintNext",
         description: "A High performance Saas app for making customisable collages, passport photos, cropping pdfs, aadhar, ayushman and printing the same",
-        tech: ["Typescript", "Nextjs", "TailwindCSS", "ShadcnUI"],
+        tech: ["Typescript", "Next Js", "TailwindCSS", "ShadcnUI", "Hono JS", "MongoDB","Canvas-api"],
         imageUrl: "/print_next2.png",
         githubLink: "https://github.com/devMukulSingh/printNext",
         hostedLink: "https://image-formatter.vercel.app/",

@@ -6,15 +6,9 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion"
 
 const AboutPage = () => {
-  const dispatch = useAppDispatch();
-  const aboutRef = useRef<HTMLDivElement | null>(null);
-  useEffect( () => {
-    dispatch(setAboutRef(aboutRef))
-  },[])
   return (
     <div
       className="flex flex-col sm:gap-0 gap-10 items-center w-full min-h-screen justify-center"
-      ref={aboutRef}
     >
       {/* <div className="flex flex-col items-center"> */}
         <h1 className="text-4xl sm:text-5xl font-semibold ">About Me</h1>

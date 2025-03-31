@@ -14,7 +14,7 @@ export default function SkillsPage() {
   // }, []);
 
   return (
-    <div className="min-h-screen flex items-center">
+    <div id="skillsPage" className="min-h-screen flex items-center">
       <div className="flex flex-col gap-10">
         <h1
           className="

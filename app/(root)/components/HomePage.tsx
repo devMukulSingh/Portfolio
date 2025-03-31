@@ -8,15 +8,11 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const HomePage = () => {
-  const dispatch = useAppDispatch();
-  const aboutRef = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    dispatch(setHomeRef(aboutRef));
-  }, []);
+
   return (
     <div
+      id="homePage"
       className="md:flex-row flex flex-col items-center justify-center gap-5 h-[calc(100vh-5rem)]"
-      ref={aboutRef}
     >
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-semibold sm:text-3xl">
