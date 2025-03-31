@@ -137,7 +137,7 @@ export const projects = [
     {
         title: "PrintNext",
         description: "A High performance Saas app for making customisable collages, passport photos, cropping pdfs, aadhar, ayushman and printing the same",
-        tech: ["Typescript", "Next Js", "TailwindCSS", "ShadcnUI", "Hono JS", "MongoDB","Canvas-api"],
+        tech: ["Typescript", "Next Js", "TailwindCSS", "ShadcnUI", "Hono JS", "MongoDB", "Canvas-api"],
         imageUrl: "/print_next2.png",
         githubLink: "https://github.com/devMukulSingh/printNext",
         hostedLink: "https://image-formatter.vercel.app/",
@@ -158,3 +158,37 @@ export const projects = [
         hostedLink: "https://rangam-res-builder.vercel.app/",
     },
 ];
+
+export const certificates = [
+    {
+        title: "Frontend Developer (React)",
+        imgSrc: "/frontend_cert.png",
+        siteLink:"https://www.hackerrank.com/certificates/968c33beedc5"
+    },
+    {
+        title: "Javascript",
+        imgSrc: "/javascript_cert.png",
+        siteLink: "https://www.hackerrank.com/certificates/5bf2d81a4cc6"
+    },
+    {
+        title: "SQL",
+        imgSrc: "/sql_cert.png",
+        siteLink: "https://www.hackerrank.com/certificates/026c85924dd5"
+    }, 
+    {
+        title: "React",
+        imgSrc: "/react_cert.png",
+        siteLink: "https://www.hackerrank.com/certificates/c5b1032ea9af"
+    },
+    {
+        title: "CSS",
+        imgSrc: "/css_cert.png",
+        siteLink: "https://www.hackerrank.com/certificates/0a7e800a99b9"
+    }
+]
+export type TCertificate = typeof certificates[0]
+
+export type TProject = typeof projects[0]
+
+export type TSkill = typeof skills[0];
+

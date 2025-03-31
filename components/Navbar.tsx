@@ -1,5 +1,4 @@
 "use client";
-import { useAppSelector } from "@/redux/hooks/hook";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
@@ -16,35 +15,42 @@ const Navbar = () => {
       title: "Projects",
     },
     {
+      title: "Certificates",
+    },
+    {
       title: "Contact",
     },
   ];
-  const { aboutRef, contactRef, homeRef, projectRef, skillsRef } =
-    useAppSelector((state) => state);
+
   const handleClick = (title: string) => {
     switch (title) {
       case "Home":
-        document.getElementById("homePage")?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("homePage")
+          ?.scrollIntoView({ behavior: "smooth" });
         break;
       case "Contact":
-        document
-          .getElementById("contactPage")
-          ?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest",
-          });
+        document.getElementById("contactPage")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
 
         break;
       case "Skills":
         document
           .getElementById("skillsPage")
-          ?.scrollIntoView({ behavior: "smooth" })
+          ?.scrollIntoView({ behavior: "smooth" });
         break;
       case "Projects":
-          document
-            .getElementById("projectsPage")
-            ?.scrollIntoView({ behavior: "smooth" });
+        document
+          .getElementById("projectsPage")
+          ?.scrollIntoView({ behavior: "smooth" });
+          break;
+      case "Certificates":
+        document
+          .getElementById("certificatesPage")
+          ?.scrollIntoView({ behavior: "smooth" });
         break;
       default:
         break;

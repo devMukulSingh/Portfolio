@@ -1,3 +1,4 @@
+import CertificatesPage from "./components/CertificatesPage";
 import HomePage from "./components/HomePage";
 import ProjectsPage from "./components/ProjectsPage";
 import SkillsPage from "./components/SkillsPage";
@@ -9,6 +10,7 @@ export default function Home() {
       <SkillsPage/>
       {/* <AboutPage/> */}
       <ProjectsPage/>
+      <CertificatesPage/>
     </main>
   );
 }
