@@ -114,3 +114,49 @@ export const skills = [
         title: "MongoDB"
     },
 ];
+
+export const projects = [
+
+    {
+        title: "Invoice Management System",
+        description:
+            "A High-performance Invoice Management SaaS for small business owners, ensuring robust and scalable handling of invoices",
+        tech: [
+            "Typescript",
+            "RemixJS",
+            "TailwindCSS",
+            "ShadcnUI",
+            "PostresSQL",
+            "SQLC",
+            "Golang",
+            "GoFiber"
+        ],
+        imageUrl: "/invoice_management.png",
+        githubLink: "https://github.com/devMukulSingh/billManagementClient",
+        githubLink2: "https://github.com/devMukulSingh/billManagementServer",
+        hostedLink: "https://invoice-management-c.vercel.app/",
+    },
+    {
+        title: "PrintNext",
+        description: "A High performance Saas app for making customisable collages, passport photos, cropping pdfs, aadhar, ayushman and printing the same",
+        tech: ["Typescript", "Nextjs", "TailwindCSS", "ShadcnUI"],
+        imageUrl: "/print_next2.png",
+        githubLink: "https://github.com/devMukulSingh/printNext",
+        hostedLink: "https://image-formatter.vercel.app/",
+    },
+    {
+        title: "Resume builder",
+        description:
+            "A resume builder integrated with AI suggestions for building professional resume",
+        tech: [
+            "Typescript",
+            "Nextjs",
+            "ChatGPT-api",
+            "TailwindCSS",
+            "ShadcnUI",
+        ],
+        imageUrl: "/resumeBuilder.png",
+        githubLink: "https://github.com/devMukulSingh/rangamResBuilder.git",
+        hostedLink: "https://rangam-res-builder.vercel.app/",
+    },
+];
