@@ -1,14 +1,13 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
-interface TechCardProps{
-    tech:string
+interface TechCardProps {
+  tech: string;
 }
 
-const TechCard:FC<TechCardProps> = ({
-    tech
-}) => {
+const TechCard: FC<TechCardProps> = ({ tech }) => {
   return (
-    <div className='
+    <div
+      className="
         border 
         px-3 
         py-2 
@@ -20,12 +19,11 @@ const TechCard:FC<TechCardProps> = ({
         cursor-pointer
         transition
         rounded-full
-        '>
-        <h1 className='text-center whitespace-nowrap text-xs'>
-            {tech}
-        </h1>
+        "
+    >
+      <h1 className="text-center whitespace-nowrap text-xs">{tech}</h1>
     </div>
-  )
-}
+  );
+};
 
-export default TechCard
+export default TechCard;

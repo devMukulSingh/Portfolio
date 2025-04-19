@@ -8,7 +8,6 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 const HomePage = () => {
-
   return (
     <div
       id="homePage"
@@ -20,9 +19,8 @@ const HomePage = () => {
           <span className="sm:text-5xl text-4xl">Mukul Singh Bisht.</span>{" "}
           <br />
           <br />A passionate <span className="text-cyan-300">MERN</span> /{" "}
-          <span className="text-cyan-300">Frontend</span> / {" "}
-          <span className="text-cyan-300">Backend</span> {" "}
-          developer
+          <span className="text-cyan-300">Frontend</span> /{" "}
+          <span className="text-cyan-300">Backend</span> developer
         </h1>
         <a className="" href={resumeLink} target="_">
           <Button

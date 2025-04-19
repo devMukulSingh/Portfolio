@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check-types":"npx tsc --noemit",
-    "format":"npx prettier . --write",
+    "check-types": "npx tsc --noemit",
+    "format": "npx prettier . --write",
     "prepare": "husky"
   },
   "dependencies": {

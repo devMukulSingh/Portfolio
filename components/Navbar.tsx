@@ -38,18 +38,16 @@ const Navbar = () => {
 
         break;
       case "Skills":
-        document
-          .getElementById("skillsPage")
-          ?.scrollIntoView({
-            behavior: "smooth",
-            inline:"start"
-          });
+        document.getElementById("skillsPage")?.scrollIntoView({
+          behavior: "smooth",
+          inline: "start",
+        });
         break;
       case "Projects":
         document
           .getElementById("projectsPage")
           ?.scrollIntoView({ behavior: "smooth" });
-          break;
+        break;
       case "Certificates":
         document
           .getElementById("certificatesPage")
@@ -64,9 +62,8 @@ const Navbar = () => {
     closed: { opacity: 0, x: "-100%" },
   };
   const handleSidebar = () => {
-    setSidebar(prev => !prev);
-
-  }
+    setSidebar((prev) => !prev);
+  };
   return (
     <>
       <div className="hidden sm:flex h-20 gap-5 items-center p-5 fixed top-0 bg-slate-200 w-full justify-center  z-40">
@@ -82,14 +79,11 @@ const Navbar = () => {
       </div>
 
       {/* <motion.nav animate={sidebar ? "open" : "closed"} variants={variants}> */}
-        <div className="flex sm:hidden items-center bg-slate-200 h-20 px-5 fixed top-0 w-full z-40">
-          <Menu
-            onClick={ handleSidebar}
-            className="sm:hidden flex"
-          />
-        </div>
-        <div
-          className={`
+      <div className="flex sm:hidden items-center bg-slate-200 h-20 px-5 fixed top-0 w-full z-40">
+        <Menu onClick={handleSidebar} className="sm:hidden flex" />
+      </div>
+      <div
+        className={`
       ${!sidebar ? "hidden" : "flex"}
       transition-transform
       z-40
@@ -105,17 +99,17 @@ const Navbar = () => {
       w-fit
       bg-slate-200 
       `}
-        >
-          {navItems.map((navItem, index) => (
-            <h1
-              onClick={() => handleClick(navItem.title)}
-              className="cursor-pointer hover:drop-shadow-2xl hover:shadow-black"
-              key={index}
-            >
-              {navItem.title}
-            </h1>
-          ))}
-        </div>
+      >
+        {navItems.map((navItem, index) => (
+          <h1
+            onClick={() => handleClick(navItem.title)}
+            className="cursor-pointer hover:drop-shadow-2xl hover:shadow-black"
+            key={index}
+          >
+            {navItem.title}
+          </h1>
+        ))}
+      </div>
       {/* </motion.nav> */}
     </>
   );

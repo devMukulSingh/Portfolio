@@ -35,14 +35,14 @@ type ProjectProps = {
     githubLink2?: string;
     hostedLink: string;
   };
-  index:number
-}
+  index: number;
+};
 
 const Project: FC<ProjectProps> = ({ project, index }) => {
   return (
-    <div 
-    className={`
-    ${index%2===0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+    <div
+      className={`
+    ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
     flex 
     gap-0 
     md:gap-5 
@@ -51,7 +51,8 @@ const Project: FC<ProjectProps> = ({ project, index }) => {
     w-full 
     items-center 
     justify-center 
-    `}>
+    `}
+    >
       <motion.div
         transition={{ duration: 0.5, ease: "easeInOut" }}
         initial={{ opacity: 0, x: 200 }}

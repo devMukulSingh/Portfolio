@@ -31,37 +31,35 @@ const formSchema = z.object({
 });
 type formValues = z.infer<typeof formSchema>;
 
-async function sendMail(url:string, { arg }: {arg:formValues}) {
+async function sendMail(url: string, { arg }: { arg: formValues }) {
   return await axios.post(url, arg);
 }
 const ContactForm = () => {
   const form = useForm<formValues>({
     resolver: zodResolver(formSchema),
-    defaultValues:{
-      email:"",
-      fullName:"",
-      message:""
-    }
-  });
-  const { trigger,isMutating } = useSWRMutation(`/api/send-mail`,sendMail,{
-    onError(e){
-      toast.error(`Something went wrong, please try again later`)
-      console.log(`Error in sendMail`,e);
+    defaultValues: {
+      email: "",
+      fullName: "",
+      message: "",
     },
-    onSuccess(){
+  });
+  const { trigger, isMutating } = useSWRMutation(`/api/send-mail`, sendMail, {
+    onError(e) {
+      toast.error(`Something went wrong, please try again later`);
+      console.log(`Error in sendMail`, e);
+    },
+    onSuccess() {
       form.reset();
       toast.success(`Message send`);
-    }
+    },
   });
-  const onSubmit = async (data: formValues) => { 
-    try{
-      // trigger(data) 
+  const onSubmit = async (data: formValues) => {
+    try {
+      // trigger(data)
+    } catch (e) {
+      console.log(`Error in onSubmit`, e);
+      toast.error(`Something went wrong`);
     }
-    catch(e){
-      console.log(`Error in onSubmit`,e);
-      toast.error(`Something went wrong`)
-    }
-     
   };
   return (
     <motion.div
@@ -95,7 +93,11 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>Your email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="mukulsingh2276@gmail.com" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="mukulsingh2276@gmail.com"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>

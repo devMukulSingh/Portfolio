@@ -84,13 +84,14 @@ function Skill({ skillData }: Props) {
           />
         </figure>
 
-        <h1 className="
+        <h1
+          className="
         font-semibold
         text-center
-        ">
+        "
+        >
           {skillData.title}
-          
-          </h1>
+        </h1>
       </Link>
     </>
   );

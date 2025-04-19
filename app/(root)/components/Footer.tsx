@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import { setContactRef } from "@/redux/rootReducer";
 import { contactLinks, profileLinks } from "@/lib/constants";
 
-
 export default function Footer() {
   const dispatch = useAppDispatch();
   const contactRef = useRef<HTMLDivElement | null>(null);
@@ -32,7 +31,6 @@ export default function Footer() {
 }
 
 function ContactLinks() {
-
   return (
     <div
       // initial={{opacity:0,y:150}}

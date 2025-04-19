@@ -2,7 +2,7 @@ import { certificates, TCertificate } from "@/lib/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {motion }from "framer-motion"
+import { motion } from "framer-motion";
 
 export default function CertificatesPage() {
   return (
@@ -11,7 +11,7 @@ export default function CertificatesPage() {
       className="
       flex 
       flex-col 
-      gap-10 
+      gap-20
       items-center 
       w-full 
       min-h-screen 
@@ -21,8 +21,8 @@ export default function CertificatesPage() {
     >
       <h1
         className="
-        text-3xl
-        sm:text-4xl
+        text-4xl
+        sm:text-5xl
         font-semibold
         "
       >
@@ -31,7 +31,8 @@ export default function CertificatesPage() {
       <ul
         className="
         grid
-        grid-cols-2
+        lg:grid-cols-2
+        grid-cols-1
         list-decimal
         gap-10
       "
@@ -51,14 +52,14 @@ type Props = {
 function Certificate({ cert }: Props) {
   return (
     // <motion.div>
-      <li className="">
-        <Link className="space-y-2" href={cert.siteLink} target="_">
-          <h1 className="text-xl sm:text-2xl font-semibold">{cert.title}</h1>
-          <figure
-            className="
+    <li className="">
+      <Link className="space-y-2" href={cert.siteLink} target="_">
+        <h1 className="text-xl sm:text-2xl font-semibold">{cert.title}</h1>
+        <figure
+          className="
         relative
-        w-[35rem]
-        h-[25rem]
+        w-[27rem]
+        h-[20rem]
         shadow-md
         shadow-white
         hover:scale-95
@@ -67,11 +68,11 @@ function Certificate({ cert }: Props) {
         hover:shadow-2xl
         hover:shadow-cyan-300
         "
-          >
-            <Image src={cert.imgSrc} alt="cert" fill className="object-cover" />
-          </figure>
-        </Link>
-      </li>
+        >
+          <Image src={cert.imgSrc} alt="cert" fill className="object-cover" />
+        </figure>
+      </Link>
+    </li>
     // </motion.div>
   );
 }
