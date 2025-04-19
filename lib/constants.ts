@@ -116,7 +116,7 @@ export const skills = [
 export const projects = [
 
     {
-        title: "Invoice Management System",
+        title: "Bill Pilot",
         description:
             "A High-performance Invoice Management SaaS for small business owners, ensuring robust and scalable handling of invoices",
         tech: [
