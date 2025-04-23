@@ -9,7 +9,10 @@
     "lint": "next lint",
     "check-types": "npx tsc --noemit",
     "format": "npx prettier . --write",
-    "prepare": "husky"
+    "format:check":"npx prettier . --check",
+    "prepare": "husky",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js  --ext jsx"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
