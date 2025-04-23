@@ -72,7 +72,7 @@ export const skills = [
     title: "Shadcn UI",
   },
   {
-    url: "/hono.jfif",
+    url: "/hono.png",
     link: "https://hono.dev/",
     title: "Hono JS",
   },
