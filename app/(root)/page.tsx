@@ -1,8 +1,8 @@
-import { Separator } from "@/components/ui/separator";
-import CertificatesPage from "./components/CertificatesPage";
-import HomePage from "./components/HomePage";
-import ProjectsPage from "./components/ProjectsPage";
-import SkillsPage from "./components/SkillsPage";
+import dynamic from "next/dynamic";
+const CertificatesPage  =  dynamic( ()=> import("./components/CertificatesPage"))
+const HomePage  =  dynamic( ()=> import("./components/HomePage"))
+const ProjectsPage  =  dynamic( ()=> import("./components/ProjectsPage"))
+const SkillsPage  =  dynamic( ()=> import("./components/SkillsPage"))
 
 export default function Home() {
   return (
