@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
-const CertificatesPage  =  dynamic( ()=> import("./components/CertificatesPage"))
-const HomePage  =  dynamic( ()=> import("./components/HomePage"))
-const ProjectsPage  =  dynamic( ()=> import("./components/ProjectsPage"))
-const SkillsPage  =  dynamic( ()=> import("./components/SkillsPage"))
+const CertificatesPage = dynamic(() => import("./components/CertificatesPage"));
+const HomePage = dynamic(() => import("./components/HomePage"));
+const ProjectsPage = dynamic(() => import("./components/ProjectsPage"));
+const SkillsPage = dynamic(() => import("./components/SkillsPage"));
 
 export default function Home() {
   return (

@@ -3,7 +3,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaHackerrank } from "react-icons/fa";
 
 export const resumeLink =
-  "https://drive.google.com/file/d/1A2-oDrZI8sJ2LxtRFPOR-LK-KBBAxnO-/view?usp=sharing";
+  "https://drive.google.com/file/d/1rRny3RU3tGjDXFhD_3qpiubKn5vD7qg5/view?usp=sharing";
 
 export const profileLinks = [
   {
@@ -18,7 +18,7 @@ export const profileLinks = [
   },
   {
     icon: StickyNote,
-    link: "https://drive.google.com/file/d/1A2-oDrZI8sJ2LxtRFPOR-LK-KBBAxnO-/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1rRny3RU3tGjDXFhD_3qpiubKn5vD7qg5/view?usp=sharing",
     title: "CV/Resume",
   },
   {
